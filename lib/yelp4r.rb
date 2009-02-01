@@ -1,0 +1,10 @@
+require 'rubygems'
+require 'httparty'
+
+require 'yelp4r/client'
+require 'yelp4r/phone_search'
+require 'yelp4r/neighborhood_search'
+require 'yelp4r/review_search'
+require 'yelp4r/response'
+require 'yelp4r/neighborhoods'
+require 'yelp4r/categories'
