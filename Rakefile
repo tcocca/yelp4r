@@ -8,8 +8,34 @@ begin
     s.summary = %Q{Yelp API wrapper in Ruby}
     s.email = "tom.cocca@gmail.com"
     s.homepage = "http://github.com/tcocca/yelp4r"
-    s.description = "TODO"
-    s.authors = ["Tom"]
+    s.description = "Simple Ruby wrapper for the Yelp API built on HTTParty with parsers for available Neighborhoods and Categories"
+    s.files = [
+      "README",
+      "LICENSE",
+      "Rakefile",
+      "VERSION.yml",
+      "lib/yelp4r.rb",
+      "lib/yelp4r/categories.rb",
+      "lib/yelp4r/client.rb",
+      "lib/yelp4r/neighborhood_search.rb",
+      "lib/yelp4r/neighborhoods.rb",
+      "lib/yelp4r/phone_search.rb",
+      "lib/yelp4r/response.rb",
+      "lib/yelp4r/review_search.rb",
+      "spec/rcov.opts",
+      "spec/spec.opts",
+      "spec/spec_helper.rb",
+      "spec/fixtures/categories.html",
+      "spec/fixtures/neighborhoods.html",
+      "spec/yelp4r/categories_spec.rb",
+      "spec/yelp4r/client_spec.rb",
+      "spec/yelp4r/neighborhood_search_spec.rb",
+      "spec/yelp4r/neighborhoods_spec.rb",
+      "spec/yelp4r/phone_search_spec.rb",
+      "spec/yelp4r/review_search_spec.rb",
+      "examples/yelp.rb"
+    ]
+    s.authors = ["Tom Cocca"]
     s.add_dependency 'httparty'
     s.add_dependency 'hpricot'
   end
