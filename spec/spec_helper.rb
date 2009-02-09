@@ -12,7 +12,7 @@ require 'yelp4r'
 module Yelp4rSpecHelper
   
   def yelp4r_client
-    Yelp4r::Client.new(ENV['ywsid'])
+    Yelp4r::Client.new('jprr4VyNVMGZrd-FARdSQA')
   end
   
   def yelp4r_test_neighs_list

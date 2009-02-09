@@ -7,7 +7,7 @@
       @client = client
     end
     
-    def search_by_bounding_box(tl_lat, tl_long, br_lat, br_long, optiona = {})
+    def search_by_bounding_box(tl_lat, tl_long, br_lat, br_long, optional = {})
       options = {:tl_lat => tl_lat, :tl_long => tl_long, :br_lat => br_lat, :br_long => br_long}
       process(options, optional)
     end
