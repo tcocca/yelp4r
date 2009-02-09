@@ -19,11 +19,19 @@ describe Yelp4r::NeighborhoodSearch do
   end
   
   describe 'search_by_bounding_box' do
+    it 'should return results when given top left and bottom right geocodes'
     
+    it 'should return the number of results requested'
+    
+    it 'should return max 20 results'
   end
   
   describe 'search_by_geocode_and_radius' do
+    it 'should return results when given a geocode and radius'
     
+    it 'should return the number of results requested'
+    
+    it 'should return max 20 results'
   end
   
   describe 'search_by_location' do

@@ -10,6 +10,8 @@ begin
     s.homepage = "http://github.com/tcocca/yelp4r"
     s.description = "TODO"
     s.authors = ["Tom"]
+    s.add_dependency 'httparty'
+    s.add_dependency 'hpricot'
   end
 rescue LoadError
   puts "Jeweler not available. Install it with: sudo gem install technicalpickles-jeweler -s http://gems.github.com"
