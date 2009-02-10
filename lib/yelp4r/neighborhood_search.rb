@@ -18,15 +18,6 @@ module Yelp4r
       process(options)
     end
     
-    def neighborhoods
-      require 'hpricot'
-      require 'open-uri'
-      # doc = open("http://www.yelp.com/developers/documentation/neighborhood_list") {|f| Hpricot(f)}
-      h = Hpricot.XML(open("http://www.yelp.com/developers/documentation/neighborhood_list").read)
-      attrs = h.search("/html/body/div[3]/div/div[2]/ul")
-      attrs.search('ul').each {|item| puts "Start:\n#{item.inner_html}\nEnd:\n"}
-    end
-    
     private
     
     def process(options)
