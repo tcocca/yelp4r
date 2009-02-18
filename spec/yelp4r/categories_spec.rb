@@ -3,6 +3,7 @@ require File.dirname(__FILE__) + '/../../lib/yelp4r'
 
 describe Yelp4r::Categories do
   include Yelp4rSpecHelper
+  include Yelp4rCatsSpecHelper
   
   before do
     @yelp_cats = Yelp4r::Categories.new

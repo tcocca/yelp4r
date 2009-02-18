@@ -15,6 +15,10 @@ module Yelp4rSpecHelper
     Yelp4r::Client.new('jprr4VyNVMGZrd-FARdSQA')
   end
   
+end
+
+module Yelp4rNeighsSpecHelper  
+  
   def yelp4r_test_neighs_list
     [
       {"Canada" => [
@@ -48,6 +52,85 @@ module Yelp4rSpecHelper
     ]
   end
   
+  def yelp4r_test_neighs_opts
+    [
+      '<option value="Canada">Canada</option>',
+      '<option value="Vancouver, BC, Canada">&nbsp;-&nbsp;Vancouver, BC</option>',
+      '<option value="Ambleside, Vancouver, BC, Canada">&nbsp;-&nbsp;-&nbsp;Ambleside</option>',
+      '<option value="Yaletown, Vancouver, BC, Canada">&nbsp;-&nbsp;-&nbsp;Yaletown</option>',
+      '<option value="Toronto, ON, Canada">&nbsp;-&nbsp;Toronto, ON</option>',
+      '<option value="USA">USA</option>',
+      '<option value="Berkeley, CA, USA">&nbsp;-&nbsp;Berkeley, CA</option>',
+      '<option value="Claremont, Berkeley, CA, USA">&nbsp;-&nbsp;-&nbsp;Claremont</option>',
+      '<option value="Downtown Berkeley, Berkeley, CA, USA">&nbsp;-&nbsp;-&nbsp;Downtown Berkeley</option>',
+      '<option value="East Solano Ave, Berkeley, CA, USA">&nbsp;-&nbsp;-&nbsp;East Solano Ave</option>',
+      '<option value="Elmwood, Berkeley, CA, USA">&nbsp;-&nbsp;-&nbsp;Elmwood</option>',
+      '<option value="New York, NY, USA">&nbsp;-&nbsp;New York, NY</option>',
+      '<option value="Bronx, New York, NY, USA">&nbsp;-&nbsp;-&nbsp;Bronx</option>',
+      '<option value="Baychester, Bronx, New York, NY, USA">&nbsp;-&nbsp;-&nbsp;-&nbsp;Baychester</option>',
+      '<option value="Bedford Park, Bronx, New York, NY, USA">&nbsp;-&nbsp;-&nbsp;-&nbsp;Bedford Park</option>',
+      '<option value="Brooklyn, New York, NY, USA">&nbsp;-&nbsp;-&nbsp;Brooklyn</option>',
+      '<option value="Bath Beach, Brooklyn, New York, NY, USA">&nbsp;-&nbsp;-&nbsp;-&nbsp;Bath Beach</option>',
+      '<option value="Bay Ridge, Brooklyn, New York, NY, USA">&nbsp;-&nbsp;-&nbsp;-&nbsp;Bay Ridge</option>',
+      '<option value="Staten Island, New York, NY, USA">&nbsp;-&nbsp;-&nbsp;Staten Island</option>',
+      '<option value="Seattle, WA, USA">&nbsp;-&nbsp;Seattle, WA</option>'
+    ]
+  end
+  
+  def yelp4r_test_neighs_opts_single_selected
+    [
+      '<option value="Canada">Canada</option>',
+      '<option value="Vancouver, BC, Canada">&nbsp;-&nbsp;Vancouver, BC</option>',
+      '<option value="Ambleside, Vancouver, BC, Canada">&nbsp;-&nbsp;-&nbsp;Ambleside</option>',
+      '<option value="Yaletown, Vancouver, BC, Canada" selected="selected">&nbsp;-&nbsp;-&nbsp;Yaletown</option>',
+      '<option value="Toronto, ON, Canada">&nbsp;-&nbsp;Toronto, ON</option>',
+      '<option value="USA">USA</option>',
+      '<option value="Berkeley, CA, USA">&nbsp;-&nbsp;Berkeley, CA</option>',
+      '<option value="Claremont, Berkeley, CA, USA">&nbsp;-&nbsp;-&nbsp;Claremont</option>',
+      '<option value="Downtown Berkeley, Berkeley, CA, USA">&nbsp;-&nbsp;-&nbsp;Downtown Berkeley</option>',
+      '<option value="East Solano Ave, Berkeley, CA, USA">&nbsp;-&nbsp;-&nbsp;East Solano Ave</option>',
+      '<option value="Elmwood, Berkeley, CA, USA">&nbsp;-&nbsp;-&nbsp;Elmwood</option>',
+      '<option value="New York, NY, USA">&nbsp;-&nbsp;New York, NY</option>',
+      '<option value="Bronx, New York, NY, USA">&nbsp;-&nbsp;-&nbsp;Bronx</option>',
+      '<option value="Baychester, Bronx, New York, NY, USA">&nbsp;-&nbsp;-&nbsp;-&nbsp;Baychester</option>',
+      '<option value="Bedford Park, Bronx, New York, NY, USA">&nbsp;-&nbsp;-&nbsp;-&nbsp;Bedford Park</option>',
+      '<option value="Brooklyn, New York, NY, USA">&nbsp;-&nbsp;-&nbsp;Brooklyn</option>',
+      '<option value="Bath Beach, Brooklyn, New York, NY, USA">&nbsp;-&nbsp;-&nbsp;-&nbsp;Bath Beach</option>',
+      '<option value="Bay Ridge, Brooklyn, New York, NY, USA">&nbsp;-&nbsp;-&nbsp;-&nbsp;Bay Ridge</option>',
+      '<option value="Staten Island, New York, NY, USA">&nbsp;-&nbsp;-&nbsp;Staten Island</option>',
+      '<option value="Seattle, WA, USA">&nbsp;-&nbsp;Seattle, WA</option>'
+    ]
+  end
+  
+  def yelp4r_test_neighs_opts_multiple_selected
+    [
+      '<option value="Canada">Canada</option>',
+      '<option value="Vancouver, BC, Canada">&nbsp;-&nbsp;Vancouver, BC</option>',
+      '<option value="Ambleside, Vancouver, BC, Canada">&nbsp;-&nbsp;-&nbsp;Ambleside</option>',
+      '<option value="Yaletown, Vancouver, BC, Canada" selected="selected">&nbsp;-&nbsp;-&nbsp;Yaletown</option>',
+      '<option value="Toronto, ON, Canada">&nbsp;-&nbsp;Toronto, ON</option>',
+      '<option value="USA">USA</option>',
+      '<option value="Berkeley, CA, USA">&nbsp;-&nbsp;Berkeley, CA</option>',
+      '<option value="Claremont, Berkeley, CA, USA">&nbsp;-&nbsp;-&nbsp;Claremont</option>',
+      '<option value="Downtown Berkeley, Berkeley, CA, USA">&nbsp;-&nbsp;-&nbsp;Downtown Berkeley</option>',
+      '<option value="East Solano Ave, Berkeley, CA, USA">&nbsp;-&nbsp;-&nbsp;East Solano Ave</option>',
+      '<option value="Elmwood, Berkeley, CA, USA">&nbsp;-&nbsp;-&nbsp;Elmwood</option>',
+      '<option value="New York, NY, USA" selected="selected">&nbsp;-&nbsp;New York, NY</option>',
+      '<option value="Bronx, New York, NY, USA">&nbsp;-&nbsp;-&nbsp;Bronx</option>',
+      '<option value="Baychester, Bronx, New York, NY, USA">&nbsp;-&nbsp;-&nbsp;-&nbsp;Baychester</option>',
+      '<option value="Bedford Park, Bronx, New York, NY, USA">&nbsp;-&nbsp;-&nbsp;-&nbsp;Bedford Park</option>',
+      '<option value="Brooklyn, New York, NY, USA">&nbsp;-&nbsp;-&nbsp;Brooklyn</option>',
+      '<option value="Bath Beach, Brooklyn, New York, NY, USA" selected="selected">&nbsp;-&nbsp;-&nbsp;-&nbsp;Bath Beach</option>',
+      '<option value="Bay Ridge, Brooklyn, New York, NY, USA">&nbsp;-&nbsp;-&nbsp;-&nbsp;Bay Ridge</option>',
+      '<option value="Staten Island, New York, NY, USA">&nbsp;-&nbsp;-&nbsp;Staten Island</option>',
+      '<option value="Seattle, WA, USA">&nbsp;-&nbsp;Seattle, WA</option>'
+    ]
+  end
+  
+end
+
+module Yelp4rCatsSpecHelper  
+
   def yelp4r_test_cats_list
     [
       {"active" => {

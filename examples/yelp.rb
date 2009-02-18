@@ -86,6 +86,29 @@ neighborhoods = Yelp4r::Neighborhoods.new
 
 puts neighborhoods.list
 
+# There is also a method to return a list of <option> tags to be used in a select tag in HTML
+# The method takes an optional string for selected or an array if used with a multiple select
+
+puts neighborhoods.options_from_list
+# or
+puts neighborhoods.options_from_list('Deep Cove, Vancouver, BC, Canada')
+# or
+puts neighborhoods.options_from_list(['Vancouver, BC, Canada', 'Deep Cove, Vancouver, BC, Canada'])
+
+# To use this in a form see the following example:
+
+=begin
+
+  <% form_tag "/yelp" do %>
+    <%= select_tag :neighs, @neighs.options_from_list(params[:neighs] || []) %>
+   <br />
+   <%= select_tag :mult_neighs, @neighs.options_from_list(params[:mult_neighs] || []), :multiple => true, :size => 10 %>
+   <br />
+   <%= submit_tag "submit" %>
+  <% end %>
+
+=end
+
 
 # The second parser is the list of categories.
 # See the page here: http://www.yelp.com/developers/documentation/category_list
