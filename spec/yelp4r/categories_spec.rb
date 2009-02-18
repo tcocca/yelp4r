@@ -27,4 +27,23 @@ describe Yelp4r::Categories do
     end
   end
   
+  describe 'options_from_list' do
+    it "should return an array of options" do
+      @yelp_cats.options_from_list.should_not be_blank
+      @yelp_cats.options_from_list.should == yelp4r_test_cats_opts
+    end
+    
+    it "should return an array of options with a single selected value when given a string" do
+      @opts = @yelp_cats.options_from_list("gyms")
+      @opts.should_not be_blank
+      @opts.should == yelp4r_test_cats_opts_single_selected
+    end
+    
+    it "should return an array of options with multiple selected values when given a array" do
+      @opts = @yelp_cats.options_from_list(["gyms", "autoglass", "appliances"])
+      @opts.should_not be_blank
+      @opts.should == yelp4r_test_cats_opts_multiple_selected
+    end
+  end
+  
 end

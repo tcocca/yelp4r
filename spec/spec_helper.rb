@@ -184,4 +184,73 @@ module Yelp4rCatsSpecHelper
     ]
   end
   
+  def yelp4r_test_cats_opts
+    [
+      '<option value="active">Active Life</option>',
+      '<option value="amusementparks">&nbsp;-&nbsp;Amusement Parks</option>',
+      '<option value="fitness">&nbsp;-&nbsp;Fitness & Instruction</option>',
+      '<option value="dancestudio">&nbsp;-&nbsp;-&nbsp;Dance Studios</option>',
+      '<option value="gyms">&nbsp;-&nbsp;-&nbsp;Gyms</option>',
+      '<option value="martialarts">&nbsp;-&nbsp;-&nbsp;Martial Arts</option>',
+      '<option value="auto">Automotive</option>',
+      '<option value="auto_detailing">&nbsp;-&nbsp;Auto Detailing</option>',
+      '<option value="autoglass">&nbsp;-&nbsp;Auto Glass Services</option>',
+      '<option value="shopping">Shopping</option>',
+      '<option value="homeandgarden">&nbsp;-&nbsp;Home & Garden</option>',
+      '<option value="appliances">&nbsp;-&nbsp;-&nbsp;Appliances</option>',
+      '<option value="furniture">&nbsp;-&nbsp;-&nbsp;Furniture Stores</option>',
+      '<option value="sportgoods">&nbsp;-&nbsp;Sporting Goods</option>',
+      '<option value="bikes">&nbsp;-&nbsp;-&nbsp;Bikes</option>',
+      '<option value="outdoorgear">&nbsp;-&nbsp;-&nbsp;Outdoor Gear</option>',
+      '<option value="sportswear">&nbsp;-&nbsp;-&nbsp;Sports Wear</option>',
+      '<option value="thrift_stores">&nbsp;-&nbsp;Thrift Stores</option>'
+    ]
+  end
+  
+  def yelp4r_test_cats_opts_single_selected
+    [
+      '<option value="active">Active Life</option>',
+      '<option value="amusementparks">&nbsp;-&nbsp;Amusement Parks</option>',
+      '<option value="fitness">&nbsp;-&nbsp;Fitness & Instruction</option>',
+      '<option value="dancestudio">&nbsp;-&nbsp;-&nbsp;Dance Studios</option>',
+      '<option value="gyms" selected="selected">&nbsp;-&nbsp;-&nbsp;Gyms</option>',
+      '<option value="martialarts">&nbsp;-&nbsp;-&nbsp;Martial Arts</option>',
+      '<option value="auto">Automotive</option>',
+      '<option value="auto_detailing">&nbsp;-&nbsp;Auto Detailing</option>',
+      '<option value="autoglass">&nbsp;-&nbsp;Auto Glass Services</option>',
+      '<option value="shopping">Shopping</option>',
+      '<option value="homeandgarden">&nbsp;-&nbsp;Home & Garden</option>',
+      '<option value="appliances">&nbsp;-&nbsp;-&nbsp;Appliances</option>',
+      '<option value="furniture">&nbsp;-&nbsp;-&nbsp;Furniture Stores</option>',
+      '<option value="sportgoods">&nbsp;-&nbsp;Sporting Goods</option>',
+      '<option value="bikes">&nbsp;-&nbsp;-&nbsp;Bikes</option>',
+      '<option value="outdoorgear">&nbsp;-&nbsp;-&nbsp;Outdoor Gear</option>',
+      '<option value="sportswear">&nbsp;-&nbsp;-&nbsp;Sports Wear</option>',
+      '<option value="thrift_stores">&nbsp;-&nbsp;Thrift Stores</option>'
+    ]
+  end
+  
+  def yelp4r_test_cats_opts_multiple_selected
+    [
+      '<option value="active">Active Life</option>',
+      '<option value="amusementparks">&nbsp;-&nbsp;Amusement Parks</option>',
+      '<option value="fitness">&nbsp;-&nbsp;Fitness & Instruction</option>',
+      '<option value="dancestudio">&nbsp;-&nbsp;-&nbsp;Dance Studios</option>',
+      '<option value="gyms" selected="selected">&nbsp;-&nbsp;-&nbsp;Gyms</option>',
+      '<option value="martialarts">&nbsp;-&nbsp;-&nbsp;Martial Arts</option>',
+      '<option value="auto">Automotive</option>',
+      '<option value="auto_detailing">&nbsp;-&nbsp;Auto Detailing</option>',
+      '<option value="autoglass" selected="selected">&nbsp;-&nbsp;Auto Glass Services</option>',
+      '<option value="shopping">Shopping</option>',
+      '<option value="homeandgarden">&nbsp;-&nbsp;Home & Garden</option>',
+      '<option value="appliances" selected="selected">&nbsp;-&nbsp;-&nbsp;Appliances</option>',
+      '<option value="furniture">&nbsp;-&nbsp;-&nbsp;Furniture Stores</option>',
+      '<option value="sportgoods">&nbsp;-&nbsp;Sporting Goods</option>',
+      '<option value="bikes">&nbsp;-&nbsp;-&nbsp;Bikes</option>',
+      '<option value="outdoorgear">&nbsp;-&nbsp;-&nbsp;Outdoor Gear</option>',
+      '<option value="sportswear">&nbsp;-&nbsp;-&nbsp;Sports Wear</option>',
+      '<option value="thrift_stores">&nbsp;-&nbsp;Thrift Stores</option>'
+    ]
+  end
+  
 end

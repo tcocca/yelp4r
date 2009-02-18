@@ -88,6 +88,7 @@ puts neighborhoods.list
 
 # There is also a method to return a list of <option> tags to be used in a select tag in HTML
 # The method takes an optional string for selected or an array if used with a multiple select
+# The value of the options return the full string of the location
 
 puts neighborhoods.options_from_list
 # or
@@ -98,7 +99,14 @@ puts neighborhoods.options_from_list(['Vancouver, BC, Canada', 'Deep Cove, Vanco
 # To use this in a form see the following example:
 
 =begin
+  #controller
+  
+  def index
+    @neighs = Yelp4r::Neighborhoods.new
+  end
 
+  #view - index.html.erb
+  
   <% form_tag "/yelp" do %>
     <%= select_tag :neighs, @neighs.options_from_list(params[:neighs] || []) %>
    <br />
@@ -123,3 +131,34 @@ categories = Yelp4r::Categories.new
 # see the spec_helper method yelp4r_test_cats_list
 
 puts categories.list
+
+# As with Neighborhoods there is also a method to return a list of <option> tags to be used in a select tag in HTML for Categories
+# The method takes an optional string for selected or an array if used with a multiple select
+# This works exactly the same as Neighborhoods
+
+puts categories.options_from_list
+# or
+puts categories.options_from_list("beaches")
+# or
+puts categories.options_from_list(["diving", "dancestudio", "golf"])
+
+# To use this in a form see the following example: (basically the same exact thing as neighborhoods)
+
+=begin
+  #controller
+  
+  def index
+    @cats = Yelp4r::Categories.new
+  end
+
+  #view - index.html.erb
+  
+  <% form_tag "/yelp" do %>
+    <%= select_tag :cats, @cats.options_from_list(params[:cats] || []) %>
+   <br />
+   <%= select_tag :mult_cats, @cats.options_from_list(params[:mult_cats] || []), :multiple => true, :size => 10 %>
+   <br />
+   <%= submit_tag "submit" %>
+  <% end %>
+
+=end
