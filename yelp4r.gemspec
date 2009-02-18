@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{yelp4r}
-  s.version = "1.0.1"
+  s.version = "1.0.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Tom Cocca"]
-  s.date = %q{2009-02-17}
+  s.date = %q{2009-02-18}
   s.description = %q{Simple Ruby wrapper for the Yelp API built on HTTParty with parsers for available Neighborhoods and Categories}
   s.email = %q{tom.cocca@gmail.com}
   s.files = ["README", "LICENSE", "Rakefile", "VERSION.yml", "lib/yelp4r.rb", "lib/yelp4r/categories.rb", "lib/yelp4r/client.rb", "lib/yelp4r/neighborhood_search.rb", "lib/yelp4r/neighborhoods.rb", "lib/yelp4r/phone_search.rb", "lib/yelp4r/response.rb", "lib/yelp4r/review_search.rb", "spec/rcov.opts", "spec/spec.opts", "spec/spec_helper.rb", "spec/fixtures/categories.html", "spec/fixtures/neighborhoods.html", "spec/yelp4r/categories_spec.rb", "spec/yelp4r/client_spec.rb", "spec/yelp4r/neighborhood_search_spec.rb", "spec/yelp4r/neighborhoods_spec.rb", "spec/yelp4r/phone_search_spec.rb", "spec/yelp4r/review_search_spec.rb", "examples/yelp.rb"]
