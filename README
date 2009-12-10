@@ -21,10 +21,10 @@ USAGE
 See http://github.com/tcocca/yelp4r/tree/master/examples
 
 
-INSTALATION
+INSTALLATION
 ==========
 
-sudo gem install tcocca-yelp4r -s http://gems.github.com
+sudo gem install yelp4r -s http://gemcutter.org
 
 
 QUESTION/CONCERNS/COMMENTS

@@ -18,7 +18,7 @@ describe Yelp4r::Categories do
   
   describe 'list' do
     before do 
-      @cats = @yelp_cats.list  
+      @cats = @yelp_cats.list
     end
     
     it "should return the list of categies" do

@@ -15,6 +15,7 @@ begin
       "Rakefile",
       "VERSION.yml",
       "lib/yelp4r.rb",
+      "lib/rubyify_keys.rb"
       "lib/yelp4r/categories.rb",
       "lib/yelp4r/client.rb",
       "lib/yelp4r/neighborhood_search.rb",
@@ -37,8 +38,11 @@ begin
     ]
     s.authors = ["Tom Cocca"]
     s.add_dependency 'httparty'
-    s.add_dependency 'hpricot'
+    s.add_dependency 'nokogiri'
+    s.add_dependency 'mash'
+    s.add_development_dependency "rspec"
   end
+  Jeweler::GemcutterTasks.new
 rescue LoadError
   puts "Jeweler not available. Install it with: sudo gem install technicalpickles-jeweler -s http://gems.github.com"
 end

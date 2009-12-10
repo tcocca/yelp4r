@@ -1,5 +1,7 @@
 require 'rubygems'
 require 'httparty'
+require 'mash'
+require 'rubyify_keys'
 
 require 'yelp4r/client'
 require 'yelp4r/phone_search'

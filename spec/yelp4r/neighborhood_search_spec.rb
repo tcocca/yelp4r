@@ -53,13 +53,6 @@ describe Yelp4r::NeighborhoodSearch do
       @results.error_message.should be_blank
     end
     
-    it 'should error when given an invalid country code' do
-      @results = get_neighborhoods('Berkely, CA', 'UK')
-      @results.should_not be_success
-      @results.data.should be_blank
-      @results.error_message.should_not be_blank
-    end
-    
     it 'should error when missing a location' do
       @results = get_neighborhoods('')
       @results.should_not be_success

@@ -8,11 +8,11 @@ module Yelp4r
     end
     
     def list
-      require 'hpricot'
+      require 'nokogiri'
       require 'open-uri'
-      doc = open(parse_url) {|f| Hpricot(f)}
-      list = doc.search("/html/body/div[3]/div/div[2]/ul")
-      neighborhoods = process_list(list.first)
+      doc = Nokogiri::HTML(open(@parse_url))
+      html = doc.at("ul.attr-list")
+      neighborhoods = process_list(html)
       return neighborhoods
     end
     
@@ -24,11 +24,14 @@ module Yelp4r
     private
     
     def process_list(item)
-      item.children_of_type("li").map do |child|
+      item.children.find_all{|t| t.name == "li"}.map do |child|
         unless child.inner_text.nil?
-          if child.next_sibling && child.next_sibling.name == "ul"
+          if child.next_sibling
+            next_list = child.next_sibling.name == "ul" ? child.next_sibling : child.next_sibling.next_sibling
+          end
+          if next_list && !next_list.children.find_all{|c| c.name == "li"}.empty?
             str_vals = decode_string(child.inner_text)
-            {str_vals[2] => {:display => str_vals[1], :children => process_list(child.next_sibling)}}
+            {str_vals[2] => {:display => str_vals[1], :children => process_list(next_list)}}
           elsif child.name == "li"
             str_vals = decode_string(child.inner_text)
             {str_vals[2] => {:display => str_vals[1]}}

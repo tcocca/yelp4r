@@ -156,13 +156,6 @@ describe Yelp4r::NeighborhoodSearch do
       @results.error_message.should_not be_blank
     end
     
-    it 'should error on invalid country code' do
-      @results = get_businesses('Boston, MA', :cc => 'UK')
-      @results.should_not be_success
-      @results.data.should be_blank
-      @results.error_message.should_not be_blank
-    end
-    
     def get_businesses(*params)
       @review_search.search_by_location(*params)
     end

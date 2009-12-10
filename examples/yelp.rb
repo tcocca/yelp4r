@@ -14,6 +14,8 @@ phone_search = Yelp4r::PhoneSearch.new(client)
 results = phone_search.search_by_phone_number('1234567890')
 
 # A response object is returned
+# The response is either a Mash Object or an array of Mash objects, these are hashes that have been converted into OpenStruct-esque objects
+# Also all keys have been rubyified, eg:  results.body['camelCase] is now results.body.camel_case
 # The following response methods are available to all Yelp searches in the 3 search classes
 #   PhoneSearch, ReveiwSearch, NeighborhoodSearch
 if results.success?
@@ -41,7 +43,7 @@ results = neigh_search.search_by_location('Boston, MA', 'US')
 
 
 # Initialize a Review Search Object
-review_search = Yelp4r::ReviewSearch.net(client)
+review_search = Yelp4r::ReviewSearch.new(client)
 
 # Each search method for the review_search object takes the following optional parameters
 # :category => this is a Yelp category term (see the categories list below)
