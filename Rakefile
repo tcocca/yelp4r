@@ -15,7 +15,7 @@ begin
       "Rakefile",
       "VERSION.yml",
       "lib/yelp4r.rb",
-      "lib/rubyify_keys.rb"
+      "lib/rubyify_keys.rb",
       "lib/yelp4r/categories.rb",
       "lib/yelp4r/client.rb",
       "lib/yelp4r/neighborhood_search.rb",
