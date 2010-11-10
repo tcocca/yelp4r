@@ -4,7 +4,7 @@ module Yelp4r
     attr_accessor :body
     
     def initialize(response)
-      @body = mash_response(response)
+      @body = rash_response(response)
     end
     
     def response_code
@@ -29,18 +29,18 @@ module Yelp4r
     
     private
     
-    def mash_response(response)
+    def rash_response(response)
       if response.is_a?(Array)
         @body = []
         response.each do |b|
           if b.is_a?(Hash)
-            @body << Mash.new(b.rubyify_keys!)
+            @body << Hashie::Rash.new(b)
           else
             @body << b
           end
         end
       elsif response.is_a?(Hash)
-        @body = Mash.new(response.rubyify_keys!)
+        @body = Hashie::Rash.new(response)
       else
         @body = response
       end

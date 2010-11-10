@@ -37,9 +37,10 @@ begin
       "examples/yelp.rb"
     ]
     s.authors = ["Tom Cocca"]
-    s.add_dependency 'httparty'
+    s.add_dependency "httparty", ">= 0.6.1"
+    s.add_dependency "hashie", ">= 0.4.0"
+    s.add_dependency "rash", ">= 0.2.0"
     s.add_dependency 'nokogiri'
-    s.add_dependency 'mash'
     s.add_development_dependency "rspec"
   end
   Jeweler::GemcutterTasks.new
