@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{yelp4r}
-  s.version = "1.1.0"
+  s.version = "1.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Tom Cocca"]
-  s.date = %q{2009-12-09}
+  s.date = %q{2010-11-10}
   s.description = %q{Simple Ruby wrapper for the Yelp API built on HTTParty with parsers for available Neighborhoods and Categories}
   s.email = %q{tom.cocca@gmail.com}
   s.extra_rdoc_files = [
@@ -22,7 +22,6 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION.yml",
      "examples/yelp.rb",
-     "lib/rubyify_keys.rb",
      "lib/yelp4r.rb",
      "lib/yelp4r/categories.rb",
      "lib/yelp4r/client.rb",
@@ -64,20 +63,23 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<httparty>, [">= 0"])
+      s.add_runtime_dependency(%q<httparty>, [">= 0.6.1"])
+      s.add_runtime_dependency(%q<hashie>, [">= 0.4.0"])
+      s.add_runtime_dependency(%q<rash>, [">= 0.2.0"])
       s.add_runtime_dependency(%q<nokogiri>, [">= 0"])
-      s.add_runtime_dependency(%q<mash>, [">= 0"])
       s.add_development_dependency(%q<rspec>, [">= 0"])
     else
-      s.add_dependency(%q<httparty>, [">= 0"])
+      s.add_dependency(%q<httparty>, [">= 0.6.1"])
+      s.add_dependency(%q<hashie>, [">= 0.4.0"])
+      s.add_dependency(%q<rash>, [">= 0.2.0"])
       s.add_dependency(%q<nokogiri>, [">= 0"])
-      s.add_dependency(%q<mash>, [">= 0"])
       s.add_dependency(%q<rspec>, [">= 0"])
     end
   else
-    s.add_dependency(%q<httparty>, [">= 0"])
+    s.add_dependency(%q<httparty>, [">= 0.6.1"])
+    s.add_dependency(%q<hashie>, [">= 0.4.0"])
+    s.add_dependency(%q<rash>, [">= 0.2.0"])
     s.add_dependency(%q<nokogiri>, [">= 0"])
-    s.add_dependency(%q<mash>, [">= 0"])
     s.add_dependency(%q<rspec>, [">= 0"])
   end
 end
