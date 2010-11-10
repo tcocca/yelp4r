@@ -4,7 +4,7 @@ require File.dirname(__FILE__) + '/../lib/yelp4r'
 # http://www.yelp.com/developers/documentation
 
 # Initialize a new Yelp Client
-client = Yelp4r::Client.new('your_ywsid_key')
+client = Yelp4r::Client.new('your_ywsid_here')
 
 
 # Initialize a new Phone Search object
@@ -14,7 +14,7 @@ phone_search = Yelp4r::PhoneSearch.new(client)
 results = phone_search.search_by_phone_number('1234567890')
 
 # A response object is returned
-# The response is either a Mash Object or an array of Mash objects, these are hashes that have been converted into OpenStruct-esque objects
+# The response is either a Rash Object or an array of Rash objects, these are hashes that have been converted into OpenStruct-esque objects
 # Also all keys have been rubyified, eg:  results.body['camelCase] is now results.body.camel_case
 # The following response methods are available to all Yelp searches in the 3 search classes
 #   PhoneSearch, ReveiwSearch, NeighborhoodSearch
@@ -59,7 +59,7 @@ results = review_search.search_by_bounding_box(38, -122.6, 37.788022, -122.39979
 # This method accepts and optional param of 
 # :radius => max of 25
 results = review_search.search_by_geocode_and_radius(37.788022, -122.399797)
-results = review_search.search_by_geocode_and_radius(37.788022, -122.399797, :radius => .5)
+results = review_search.search_by_geocode_and_radius(37.788022, -122.399797, :radius => 0.5)
 results = review_search.search_by_geocode_and_radius(37.788022, -122.399797, :category => "bars", :radius => 1)
 
 # Search by location
